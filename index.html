@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherVue - Beautiful Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Weather Effect Elements -->
+    <div class="rain"></div>
+    <div class="snow"></div>
+    <div class="sun"></div>
+    <div class="clouds"></div>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="location-input" placeholder="Enter location...">
+            <button id="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="weather-info hidden" id="weather-info">
+            <div class="location">
+                <h2 id="city">Loading...</h2>
+                <p id="country"></p>
+            </div>
+
+            <div class="weather-main">
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <div class="temperature">
+                    <h1 id="temp">--°C</h1>
+                    <p id="condition">--</p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <i class="fas fa-temperature-high"></i>
+                    <div>
+                        <p>Feels Like</p>
+                        <p id="feels-like">--°C</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <p>Humidity</p>
+                        <p id="humidity">--%</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <p>Wind Speed</p>
+                        <p id="wind-speed">-- km/h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="air-quality">
+                <h3>Air Quality</h3>
+                <div class="aqi-meter">
+                    <div class="aqi-level" id="aqi-level"></div>
+                </div>
+                <p id="aqi-text">Loading AQI data...</p>
+            </div>
+        </div>
+
+        <div id="error-message" class="error-message hidden">
+            Location not found. Please try again.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
